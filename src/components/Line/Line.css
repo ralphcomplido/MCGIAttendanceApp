@@ -1,0 +1,23 @@
+.line {
+   border-left: 2px solid white;
+    height: 671px;
+    margin-top: 48px;
+}
+
+.right {
+  animation: right 2s forwards;
+}
+
+@keyframes right {
+  0% {right: 0px;position:relative;display: block;}
+  100% {right: -140px;position:relative; display: block;}
+}
+
+.left {
+  animation: left 2s forwards;
+}
+
+@keyframes left {
+  0% {left: 0px;position:relative;display: block;}
+  100% {left: -155px;position:relative; display: block;}
+}
