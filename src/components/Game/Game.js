@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import NameForm from "../NameForm";
 import Line from "../Line";
 import Container from "../Container";
 import Guest from "../Guest";
 import Member from "../Member";
+import Scan from "../Scan";
+import GuestForm from "../GuestForm";
+import MemberForm from "../MemberForm";
 import Footer from "../Footer";
 import data from "../../data.json";
 
@@ -25,12 +27,17 @@ class Game extends Component {
     if(id == "member") {
       this.setState({member: true, 
                      left: false,
-                     guest: false
+                     right:true,
+                     guest: false,
+                     center: false
                    });
     } else if(id == "guest") {
       this.setState({guest: true, 
                      left: true,
-                     member: false});
+                     right: false,
+
+                     member: false,
+                   center: false});
     }
     
 
@@ -44,7 +51,7 @@ class Game extends Component {
               handleClick={this.handleItemClick}
               id={"member"}
               image={this.state.data[0].image}
-              move={this.state.member ? "" : "member"}
+              move={!this.state.center ? (this.state.member ? "member-chosen" : "minimize-member") : ""}
             />
               <Line
                 right={!this.state.center ? (this.state.left ? "left" : "right") : ""}
@@ -54,10 +61,22 @@ class Game extends Component {
               handleClick={this.handleItemClick}
               id={"guest"}
               image={this.state.data[1].image}
-              move={this.state.guest ? "" : "guest"}
+              move={!this.state.center ? (this.state.guest ? "guest-chosen" : "minimize-guest") : ""}
 
             />
-            <NameForm />
+            <GuestForm
+              hide={this.state.left} 
+             />
+             <MemberForm
+              hide={this.state.right} 
+             />
+              <Scan
+             handleClick={this.handleItemClick}
+              id={"member"}
+             image={this.state.data[2].image}
+              move={!this.state.center ? (this.state.member ? "" : "hide") : "hide"} 
+             
+             />
         </Container>
     );
   }

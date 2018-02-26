@@ -5,19 +5,19 @@
 }
 
 .right {
-  animation: right 2s forwards;
+  animation: right 1s forwards;
 }
 
 @keyframes right {
   0% {right: 0px;position:relative;display: block;}
-  100% {right: -140px;position:relative; display: block;}
+  100% {right: -255px;position:relative; display: block;}
 }
 
 .left {
-  animation: left 2s forwards;
+  animation: left 1s forwards;
 }
 
 @keyframes left {
   0% {left: 0px;position:relative;display: block;}
-  100% {left: -155px;position:relative; display: block;}
+  100% {left: -250px;position:relative; display: block;}
 }

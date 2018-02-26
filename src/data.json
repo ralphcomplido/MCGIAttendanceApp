@@ -8,5 +8,10 @@
     "id": 2,
     "image": "/assets/images/guest.png",
     "clicked": false
+  },
+  {
+    "id": 3,
+    "image": "/assets/images/scan.png",
+    "clicked": false
   }
 ]

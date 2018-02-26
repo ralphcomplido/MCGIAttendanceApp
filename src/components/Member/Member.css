@@ -16,16 +16,25 @@
   transition: 0.1s;
 }
 
-.member {
-  animation: member 2s forwards;
+.minimize-member {
+  animation: minimize-member 1s forwards;
 }
 
-@keyframes member {
+@keyframes minimize-member {
   0% {top: 0px; position: relative;}
-  100% {top: -130px; left: -150px; height: 100px;
+  100% {top: -130px; left: -250px; height: 100px;
   width: 100px; position: relative;}
 }
 
+.member-chosen {
+  animation: member-chosen 1s forwards;
+}
+
+@keyframes member-chosen {
+  0% {top: 0px; position: relative;}
+  100% {top: -120px; left: -50px; height: 200px;
+  width: 200px; position: relative;}
+}
 /*@-webkit-keyframes move {
     0%  {top: 0px;}
   100% {top: 200px;}

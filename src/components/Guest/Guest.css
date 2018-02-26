@@ -19,14 +19,24 @@
 
 
 
-.guest {
-  animation: guest 2s forwards;
+.minimize-guest {
+  animation: minimize-guest 1s forwards;
 }
 
-@keyframes guest {
+@keyframes minimize-guest {
   0% {top: 0px; position: relative;}
-  100% {top: -120px; left: 140px; height: 100px;
+  100% {top: -120px; left: 250px; height: 100px;
   width: 100px; position: relative;}
+}
+
+.guest-chosen {
+  animation: guest-chosen 1s forwards;
+}
+
+@keyframes guest-chosen {
+  0% {top: 0px; position: relative;}
+  100% {top: -120px; left: 40px; height: 200px;
+  width: 200px; position: relative;}
 }
 /*@-webkit-keyframes move {
     0%  {top: 0px;}

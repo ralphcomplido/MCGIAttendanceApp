@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import "./NameForm.css";
+import "./GuestForm.css";
 
 // Component for the Navbar
 
-class NameForm extends Component {
+class GuestForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {value: '',
+                  class:'hide'
+                };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,7 +25,7 @@ class NameForm extends Component {
 
   render() {
     return (
-      <div className={'form'}>
+      <div className={`form ${!this.props.hide ? this.state.class : ""}`}>
       <form onSubmit={this.handleSubmit}>
         <label>
           <input id="name" placeholder="NAME" type="text" value={this.state.value} onChange={this.handleChange} />
@@ -35,4 +37,4 @@ class NameForm extends Component {
   }
 }
 
-export default NameForm;
+export default GuestForm;
