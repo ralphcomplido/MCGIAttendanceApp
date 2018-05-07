@@ -7,6 +7,7 @@ import Scan from "../Scan";
 import GuestForm from "../GuestForm";
 import MemberForm from "../MemberForm";
 import Footer from "../Footer";
+import IDNum from "../IDNum";
 import data from "../../data.json";
 
 class Game extends Component {
@@ -74,7 +75,7 @@ class Game extends Component {
              handleClick={this.handleItemClick}
               id={"member"}
              image={this.state.data[2].image}
-              move={!this.state.center ? (this.state.member ? "" : "hide") : "hide"} 
+              move={!this.state.center ? (this.state.member ? "member-active" : "hide") : "hide"} 
              
              />
         </Container>

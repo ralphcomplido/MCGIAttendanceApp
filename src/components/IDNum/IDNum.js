@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./GuestForm.css";
+import "./IDNum.css";
 
 // Component for the Navbar
 
-class GuestForm extends Component {
+class IDNum extends Component {
   constructor(props) {
     super(props);
     this.state = {value: '',
@@ -25,16 +25,16 @@ class GuestForm extends Component {
 
   render() {
     return (
-      <div className={`form ${!this.props.hide ? this.state.class : "guest-active"}`}>
+      <div className={`form ${!this.props.hide ? this.state.class : "fade-in"}`}>
       <form onSubmit={this.handleSubmit}>
         <label>
           <input id="name" placeholder="NAME" type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
-        <input type="submit" value="SUBMIT" id="guest-submit" />
+        <input type="submit" value="SUBMIT" id="submit" />
       </form>
       </div>
     );
   }
 }
 
-export default GuestForm;
+export default IDNum;

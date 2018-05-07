@@ -31,7 +31,7 @@ class MemberForm extends Component {
 
   render() {
     return (
-      <div className={`member-form ${!this.props.hide ? this.state.class : ""}`}>
+      <div className={`member-form ${!this.props.hide ? this.state.class : "member-active"}`}>
       <form onSubmit={this.handleSubmit}>
         <label>
           <input  className="member-name" placeholder="LAST NAME" type="text" value={this.state.firstName} onChange={this.fistNameChange} />
